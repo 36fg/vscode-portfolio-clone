@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-layout-bg: #24262B;
+}
+
