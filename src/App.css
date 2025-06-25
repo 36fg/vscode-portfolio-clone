@@ -2,5 +2,11 @@
 
 @theme {
   --color-layout-bg: #24262B;
+  --color-black-bg: #181A1F;
+  --color-viola: rgb(208, 148, 234);
+  --color-blue: #5599dd;
+  --color-yellow: #ffd700;
+  --color-red: rgb(245, 151, 148);
+  --color-green: #8dc149;
 }
 
