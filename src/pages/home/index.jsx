@@ -1,4 +1,5 @@
-import { TextConteiner, Purple, Blue, Yellow, Red, Green, Card } from '../../components/index'
+import { TextConteiner, Purple, Blue, Yellow, Red, Green } from '../../components/index'
+import SkillCard from './components/SkillCard'
 import { skillsData } from '../../data/skilsData'
 
 const Home = () => {
@@ -41,10 +42,10 @@ const Home = () => {
       <div className='ml-[4vh] w-[85vh] h-auto grid grid-cols-4 gap-[1vh]'>
         {
           skillsData.map((data, index) => {
-            return <Card key={index} >
+            return <SkillCard key={index} >
               <span className="text-xl">{data.icon}</span>
               <p className='text-white text-[1.6vh]'>{data.name}</p>
-            </Card>
+            </SkillCard>
           })
         }
       </div>
