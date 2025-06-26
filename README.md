@@ -1,12 +1,28 @@
-# React + Vite
+# VSCode-Portfolio Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small portfolio project inspired by the look and feel of Visual Studio Code.
+It’s not my official portfolio — just a creative side project I wanted to build after seeing similar ideas online.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I wanted to recreate the VSCode aesthetic to showcase my skills and developer journey in a more tech-friendly and original way.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- Tailwind CSS
+- Configurable for Vercel, Netlify, or other platforms
+
+## Important Note
+
+This project is not responsive, so it’s best viewed on desktop only.
+
+## Disclaimer
+
+This is not my real portfolio — just a personal experiment to explore coding and UI design inspired by a dev environment.
+
+
+
+
+
+
