@@ -4,6 +4,7 @@ import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 import { FaReact, FaNpm } from "react-icons/fa";
 import { GoFile } from "react-icons/go";
 import { SiEslint } from "react-icons/si";
+import { useLocation, useNavigate  } from "react-router-dom";
 
 
 const Folder = ({ name, arrow, open, setOpen }) => {
@@ -27,19 +28,22 @@ const Folder = ({ name, arrow, open, setOpen }) => {
   );
 };
 
-const File = ({ name}) => {
-  return (
-    <div className=" pl-[1vh] w-[100%] h-[3.5vh] cursor-pointer hover:bg-[#484B5970] gap-[1vh] rounded-[0.5vh] flex items-center">
-        <FaReact className='text-[#5ED3F3] text-[1.8vh]'></FaReact>
-        <p className="text-white text-[1.7vh] font-[400] tracking-[0.1vh]">{name}</p>
-    </div>
-  );
+const File = ({name, route}) => {
+    const location = useLocation();
+    const navigate = useNavigate()
+
+    return (
+      <div onClick={() => navigate(route)} className={`${location.pathname === route ? "bg-[#484B5970]" : ""} pl-[1vh] w-[100%] h-[3.5vh] cursor-pointer hover:bg-[#484B5970] gap-[1vh] rounded-[0.5vh] flex items-center`}>
+          <FaReact className='text-[#5ED3F3] text-[1.8vh]'></FaReact>
+          <p className={` text-white text-[1.7vh] font-[400] tracking-[0.1vh]`}>{name}</p>
+      </div>
+    );
 };
 
 
 
 const Explorer = () => {
-  const [openSrc, setOpenSrc] = useState(false);
+  const [openSrc, setOpenSrc] = useState(true);
 
   return (
     <div className='w-[30vh] h-[100%] bg-black-bg rounded-[0.7vh] flex flex-col p-[1vh]'>
@@ -50,11 +54,11 @@ const Explorer = () => {
         <Folder name="src" arrow={true} open={openSrc} setOpen={setOpenSrc} />
         {openSrc && 
             <div className='w-[100%] h-auto flex justify-end'>
-                <div className='w-[85%] h-[100%]'>
-                    <File name="Home.jsx" ></File>
-                    <File name="About.jsx" ></File>
-                    <File name="Project.jsx" ></File>
-                    <File name="Contact.jsx" ></File>
+                <div className='w-[85%] h-[100%] flex flex-col'>
+                    <File route="/" name="Home.jsx" ></File>
+                    <File route="/about" name="About.jsx" ></File>
+                    <File route="/projects" name="Projects.jsx" ></File>
+                    <File route="/contact" name="Contact.jsx" ></File>
                     <Folder name="components" />
                 </div>
             </div>
